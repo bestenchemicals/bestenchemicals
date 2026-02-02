@@ -1,0 +1,466 @@
+{
+  "navigation": {
+    "brand": {
+      "name": "Besten Chemicals",
+      "tagline": "Chemical Solutions"
+    },
+    "links": {
+      "home": "Home",
+      "company": "The Company",
+      "products": "Products",
+      "services": "Services",
+      "news": "News",
+      "contact": "Contact Us"
+    }
+  },
+  "hero": {
+    "title": "Integrative Innovation, Sustainable",
+    "titleBreak": "Solutions",
+    "buttons": {
+      "products": "Our Products",
+      "services": "Our Services"
+    },
+    "sectionTitle": "Chemistry unveiled",
+    "sectionSubtitle": "The key features",
+    "features": {
+      "innovative": {
+        "title": "Innovative Chemistry Solutions",
+        "description": "Solar energy is a highly efficient and renewable power source. By harnessing the sun's rays through solar panels"
+      },
+      "sustainability": {
+        "title": "Commitment to Sustainability",
+        "description": "With advancements in technology, the installation and maintenance costs of solar panels have significantly decreased"
+      },
+      "integrative": {
+        "title": "Integrative Solutions Approach",
+        "description": "Choosing solar energy promotes sustainability by reducing carbon emissions and dependence on non-renewable resources."
+      }
+    }
+  },
+  "company": {
+    "label": "Besten Chemicals",
+    "title": "Innovative Chemical Solutions",
+    "titleBreak": "for Safety and Wellness",
+    "paragraphs": [
+      "In Roman philosophy, the Latin word Salus depicts the Goddess of health and medicine while in Eastern philosophy Zen is the concept signifying balance, harmony and inner peace.",
+      "Besten Chemicals Additives provides a perfect blend of these two concepts to provide solutions to customer's problems thereby protecting both mother nature and human beings in the best possible way."
+    ],
+    "imageLabels": {
+      "integrated": "Integrated",
+      "innovative": "Innovative"
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "items": [
+      { "number": "01", "name": "Preservatives" },
+      { "number": "02", "name": "Surfactants" },
+      { "number": "03", "name": "Defoamers" },
+      { "number": "04", "name": "Wetting agents" },
+      { "number": "05", "name": "Pre-Treatment Chemicals" }
+    ]
+  },
+  "services": {
+    "title": "Our Services",
+    "items": [
+      { "number": "01", "name": "Microbiological Testing & Certification" }
+    ]
+  },
+  "metrics": {
+    "label": "Key Metrics",
+    "title": "The",
+    "titleLine2": "ultimate",
+    "titleLine3": "solution",
+    "items": [
+      {
+        "value": "10+",
+        "label": "Industries",
+        "description": "delivering tailored chemical solutions that meet diverse challenges with precision and innovation"
+      },
+      {
+        "value": "40+",
+        "label": "Products",
+        "description": "comprehensive range of chemical solutions designed to meet the highest standards of quality and performance"
+      },
+      {
+        "value": "100%",
+        "label": "Quality Assurance",
+        "description": "rigorous testing and certification processes ensuring every product meets international standards"
+      },
+      {
+        "value": "24/7",
+        "label": "Support",
+        "description": "dedicated technical support team available around the clock to assist with your chemical solution needs"
+      }
+    ]
+  },
+  "footer": {
+    "description": "Providing innovative chemical solutions for health, wellness, and sustainable industry.",
+    "quickLinks": {
+      "title": "Quick Links",
+      "links": [
+        { "text": "Home", "href": "/" },
+        { "text": "The Company", "href": "/#company" },
+        { "text": "Products", "href": "/products" },
+        { "text": "Services", "href": "/#services" }
+      ]
+    },
+    "productsLinks": {
+      "title": "Products",
+      "links": [
+        { "text": "Preservatives", "href": "/product/preservatives" },
+        { "text": "Surfactants", "href": "/product/surfactants" },
+        { "text": "Defoamers", "href": "/product/defoamers" },
+        { "text": "Wetting Agents", "href": "/product/wetting-agents" }
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "info@bestenchemicals.com",
+      "phone": "+91 8000 0000 00",
+      "location": "View Location"
+    },
+    "copyright": "2025 Besten CHemicals. All rights reserved.",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "loader": {
+    "text": "Loading Chemical Solutions"
+  },
+  "productsListPage": {
+    "hero": {
+      "title": "Our Products",
+      "description": "Explore our range of high-quality chemical products tailored for the health and wellness industry. Designed for safety and sustainability, our solutions meet the highest standards.",
+      "exploreButton": "Explore our products"
+    },
+    "sectionLabel": "Our Products",
+    "products": [
+      {
+        "id": "preservatives",
+        "number": "01",
+        "name": "Preservatives",
+        "description": "Extend shelf life while maintaining quality and safety"
+      },
+      {
+        "id": "surfactants",
+        "number": "02",
+        "name": "Surfactants",
+        "description": "Reduce surface tension for optimal performance"
+      },
+      {
+        "id": "defoamers",
+        "number": "03",
+        "name": "Defoamers",
+        "description": "Eliminate foam in industrial processes efficiently"
+      },
+      {
+        "id": "wetting-agents",
+        "number": "04",
+        "name": "Wetting agents",
+        "description": "Improve wettability and spreading properties"
+      },
+      {
+        "id": "pre-treatment",
+        "number": "05",
+        "name": "Pre-Treatment Chemicals",
+        "description": "Prepare surfaces for optimal chemical processing"
+      }
+    ]
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Get In Touch",
+      "description": "Have questions about our products? We're here to help and would love to hear from you."
+    },
+    "contactInfo": {
+      "email": {
+        "title": "Email",
+        "primary": "info@bestenchemicals.com",
+        "secondary": "sales@bestenchemicals.com"
+      },
+      "phone": {
+        "title": "Phone",
+        "primary": "+91 8000 0000 00",
+        "secondary": "+91 9999 9999 99"
+      },
+      "location": {
+        "title": "Location",
+        "company": "Besten Chemicals",
+        "address": "Mumbai, India"
+      }
+    },
+    "form": {
+      "title": "Send us a Message",
+      "fields": {
+        "name": {
+          "label": "Full Name",
+          "placeholder": "Enter your full name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Enter your email"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "Enter your phone number"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Enter your message"
+        }
+      },
+      "submitButton": "Send Message",
+      "successMessage": "Thank you! Your message has been sent successfully.",
+      "errorMessage": "Oops! Something went wrong. Please try again."
+    },
+    "map": {
+      "title": "Our Office Location"
+    }
+  },
+  "productDetail": {
+    "notFound": "Product not found",
+    "exploreButton": "Explore",
+    "sectionTitle": "These products provide multiple roles of",
+    "whyChooseTitle": "Why choose our",
+    "contactButton": "Contact Us",
+    "products": {
+      "preservatives": {
+        "name": "Preservatives",
+        "tagline": "Reliable Protection for Your Products",
+        "description": "Our preservatives are designed to extend the shelf life of your products while maintaining their quality and safety.",
+        "fullDescription": "Our preservatives are designed to extend the shelf life of your products while maintaining their quality and safety. Engineered to inhibit the growth of microorganisms, our preservatives ensure that your goods remain fresh and effective from production to consumption.",
+        "benefits": [
+          {
+            "icon": "🛡️",
+            "title": "Safeguarding Health",
+            "description": "Water treatment, Food etc."
+          },
+          {
+            "icon": "✨",
+            "title": "Protecting finished goods",
+            "description": "Toiletries, cosmetic, textile and pharmaceuticals"
+          },
+          {
+            "icon": "⚙️",
+            "title": "Protecting industrial processes",
+            "description": "Paper, leather, textile etc"
+          },
+          {
+            "icon": "🌱",
+            "title": "Conserve natural resources",
+            "description": "Woods"
+          }
+        ],
+        "applications": [
+          {
+            "category": "Safeguarding Health",
+            "uses": "Water treatment, Food etc."
+          },
+          {
+            "category": "Protecting finished goods",
+            "uses": "Toiletries, cosmetic, textile and pharmaceuticals"
+          },
+          {
+            "category": "Protecting industrial processes",
+            "uses": "Paper, leather, textile etc"
+          },
+          {
+            "category": "Conserve natural resources",
+            "uses": "Woods"
+          }
+        ],
+        "whyChoose": "With our expertise in microbiological testing and certification, we guarantee that our preservatives deliver exceptional efficacy and reliability. Partner with us to enhance your product's durability and maintain its quality, giving you and your customers peace of mind."
+      },
+      "surfactants": {
+        "name": "Surfactants",
+        "tagline": "Superior Wetting and Spreading Properties",
+        "description": "Advanced surfactants that reduce surface tension and improve product performance.",
+        "fullDescription": "Our surfactants are formulated to reduce surface tension effectively, enabling superior wetting and spreading properties. These versatile compounds enhance the performance of cleaning products, personal care items, and industrial applications.",
+        "benefits": [
+          {
+            "icon": "💧",
+            "title": "Superior Wetting",
+            "description": "Enhanced spreading on surfaces"
+          },
+          {
+            "icon": "🧼",
+            "title": "Enhanced Cleaning",
+            "description": "More effective dirt removal"
+          },
+          {
+            "icon": "🌊",
+            "title": "Emulsification",
+            "description": "Better mixing of oil and water"
+          },
+          {
+            "icon": "♻️",
+            "title": "Biodegradable",
+            "description": "Environmental friendly formulations"
+          }
+        ],
+        "applications": [
+          {
+            "category": "Cleaning Products",
+            "uses": "Detergents, soaps, degreasers"
+          },
+          {
+            "category": "Personal Care",
+            "uses": "Shampoos, body washes, cosmetics"
+          },
+          {
+            "category": "Industrial",
+            "uses": "Textile processing, metalworking"
+          },
+          {
+            "category": "Agriculture",
+            "uses": "Pesticide dispersions"
+          }
+        ],
+        "whyChoose": "Our surfactants are scientifically formulated to deliver consistent performance while maintaining environmental responsibility."
+      },
+      "defoamers": {
+        "name": "Defoamers",
+        "tagline": "Efficient Foam Control Solutions",
+        "description": "Effective defoaming agents that eliminate foam in industrial and consumer applications.",
+        "fullDescription": "Our defoamers are engineered to quickly and effectively eliminate foam formation in various industrial and consumer applications. They ensure smooth operations and optimal product quality.",
+        "benefits": [
+          {
+            "icon": "💨",
+            "title": "Fast Action",
+            "description": "Rapid foam suppression"
+          },
+          {
+            "icon": "⚡",
+            "title": "Efficient",
+            "description": "Works at low concentrations"
+          },
+          {
+            "icon": "🔧",
+            "title": "Universal",
+            "description": "Compatible with various systems"
+          },
+          {
+            "icon": "💪",
+            "title": "Stable",
+            "description": "Long-lasting performance"
+          }
+        ],
+        "applications": [
+          {
+            "category": "Food Processing",
+            "uses": "Brewing, dairy, juice production"
+          },
+          {
+            "category": "Wastewater Treatment",
+            "uses": "Foam control in treatment plants"
+          },
+          {
+            "category": "Paper & Pulp",
+            "uses": "Production efficiency improvement"
+          },
+          {
+            "category": "Coatings",
+            "uses": "Paint and varnish applications"
+          }
+        ],
+        "whyChoose": "Our defoaming solutions are trusted by industry leaders for their reliability and effectiveness in challenging applications."
+      },
+      "wetting-agents": {
+        "name": "Wetting Agents",
+        "tagline": "Improved Surface Wettability",
+        "description": "Advanced wetting agents that improve surface contact and adhesion properties.",
+        "fullDescription": "Our wetting agents enhance the contact between liquids and solid surfaces, improving absorption, spreading, and adhesion properties. Ideal for coatings, textiles, and agricultural applications.",
+        "benefits": [
+          {
+            "icon": "✨",
+            "title": "Enhanced Adhesion",
+            "description": "Better substrate contact"
+          },
+          {
+            "icon": "🎨",
+            "title": "Improved Coverage",
+            "description": "More uniform distribution"
+          },
+          {
+            "icon": "💧",
+            "title": "Better Penetration",
+            "description": "Deeper liquid absorption"
+          },
+          {
+            "icon": "🌟",
+            "title": "Consistent Results",
+            "description": "Reliable performance"
+          }
+        ],
+        "applications": [
+          {
+            "category": "Coatings",
+            "uses": "Paints, varnishes, lacquers"
+          },
+          {
+            "category": "Textiles",
+            "uses": "Fabric processing, dyeing"
+          },
+          {
+            "category": "Agriculture",
+            "uses": "Pesticide and herbicide application"
+          },
+          {
+            "category": "Printing",
+            "uses": "Ink adhesion improvement"
+          }
+        ],
+        "whyChoose": "Our wetting agents provide superior performance and consistency across diverse applications."
+      },
+      "pre-treatment": {
+        "name": "Pre-Treatment Chemicals",
+        "tagline": "Optimal Surface Preparation",
+        "description": "Specialized pre-treatment chemicals for surface preparation and metal processing.",
+        "fullDescription": "Our pre-treatment chemicals are designed to prepare surfaces for subsequent processes, ensuring optimal adhesion, corrosion resistance, and overall quality. Suitable for metal, plastic, and composite materials.",
+        "benefits": [
+          {
+            "icon": "🔍",
+            "title": "Surface Cleaning",
+            "description": "Thorough contaminant removal"
+          },
+          {
+            "icon": "🛡️",
+            "title": "Corrosion Prevention",
+            "description": "Enhanced protection"
+          },
+          {
+            "icon": "🎯",
+            "title": "Improved Adhesion",
+            "description": "Better coating adherence"
+          },
+          {
+            "icon": "📈",
+            "title": "Quality Enhancement",
+            "description": "Superior finish quality"
+          }
+        ],
+        "applications": [
+          {
+            "category": "Metal Treatment",
+            "uses": "Steel, aluminum, copper processing"
+          },
+          {
+            "category": "Automotive",
+            "uses": "Pre-paint preparation"
+          },
+          {
+            "category": "Electronics",
+            "uses": "PCB and component preparation"
+          },
+          {
+            "category": "Heavy Industries",
+            "uses": "Equipment maintenance and preparation"
+          }
+        ],
+        "whyChoose": "Our pre-treatment solutions ensure superior surface preparation for maximum durability and performance."
+      }
+    }
+  }
+}

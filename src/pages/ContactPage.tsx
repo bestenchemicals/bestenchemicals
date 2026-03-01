@@ -5,26 +5,13 @@ import Footer from "../components/Footer";
 import { useTranslation } from "../hooks/useTranslation";
 
 // ---------------------------------------------------------------------------
-// To use EmailJS (recommended — free, no backend needed):
-//   1. Sign up at https://www.emailjs.com
-//   2. Create a Service, Email Template, and note your Public Key
-//   3. Run: npm install @emailjs/browser
-//   4. Fill in the three constants below
+// Formspree setup (free, no backend, works with your GoDaddy email):
+//   1. Go to https://formspree.io and sign up
+//   2. Click "New Form", enter your GoDaddy email as the recipient
+//   3. Copy your form ID from the endpoint shown (e.g. "xyzabc12")
+//   4. Paste just the ID below ↓
 // ---------------------------------------------------------------------------
-import emailjs from "@emailjs/browser";
-
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID"; // e.g. "service_abc123"
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // e.g. "template_xyz456"
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY"; // e.g. "abcDEFghiJKL789"
-
-// ---------------------------------------------------------------------------
-// EmailJS template variables used below:
-//   {{from_name}}   — sender's name
-//   {{from_email}}  — sender's email
-//   {{phone}}       — sender's phone (optional)
-//   {{message}}     — message body
-// Make sure your EmailJS template contains these exact variable names.
-// ---------------------------------------------------------------------------
+const FORMSPREE_FORM_ID = "xbdaeyle"; // e.g. "xyzabc12"
 
 type SubmitStatus = "idle" | "loading" | "success" | "error";
 
@@ -38,37 +25,25 @@ export default function ContactPage() {
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus>("idle");
   const [isVisible, setIsVisible] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
-  const formRef = useRef<HTMLFormElement>(null);
   const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
+        if (entry.isIntersecting) setIsVisible(true);
       },
       { threshold: 0.1 }
     );
-
-    if (contentRef.current) {
-      observer.observe(contentRef.current);
-    }
-
+    if (contentRef.current) observer.observe(contentRef.current);
     return () => {
-      if (contentRef.current) {
-        observer.unobserve(contentRef.current);
-      }
+      if (contentRef.current) observer.unobserve(contentRef.current);
     };
   }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -76,28 +51,31 @@ export default function ContactPage() {
     setSubmitStatus("loading");
 
     try {
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
+      const response = await fetch(
+        `https://formspree.io/f/${FORMSPREE_FORM_ID}`,
         {
-          from_name: formData.name,
-          from_email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-        },
-        EMAILJS_PUBLIC_KEY
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            message: formData.message,
+          }),
+        }
       );
 
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "", phone: "", message: "" });
-
-      // Reset status after 5 seconds
-      setTimeout(() => setSubmitStatus("idle"), 5000);
-    } catch (error) {
-      console.error("EmailJS error:", error);
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch {
       setSubmitStatus("error");
-      setTimeout(() => setSubmitStatus("idle"), 5000);
     }
+
+    setTimeout(() => setSubmitStatus("idle"), 5000);
   };
 
   return (
@@ -144,7 +122,7 @@ export default function ContactPage() {
                   : "opacity-0 translate-y-10"
               }`}
             >
-              <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4 group-hover:bg-blue-200 transition-colors">
+              <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4 transition-colors">
                 <Mail className="w-7 h-7 text-blue-800" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -178,7 +156,7 @@ export default function ContactPage() {
                   : "opacity-0 translate-y-10"
               }`}
             >
-              <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4 group-hover:bg-blue-200 transition-colors">
+              <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4 transition-colors">
                 <Phone className="w-7 h-7 text-blue-800" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -214,7 +192,7 @@ export default function ContactPage() {
                   : "opacity-0 translate-y-10"
               }`}
             >
-              <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4 group-hover:bg-blue-200 transition-colors">
+              <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4 transition-colors">
                 <MapPin className="w-7 h-7 text-blue-800" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -241,7 +219,7 @@ export default function ContactPage() {
               <h2 className="text-3xl font-light text-gray-900 mb-8">
                 {t("contactPage.form.title")}
               </h2>
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     {t("contactPage.form.fields.name.label")}
@@ -303,12 +281,11 @@ export default function ContactPage() {
                   ></textarea>
                 </div>
 
-                {/* Success / Error feedback */}
                 {submitStatus === "success" && (
                   <div className="flex items-center gap-2 text-green-700 bg-green-50 border border-green-200 rounded-lg px-4 py-3">
                     <CheckCircle className="w-5 h-5 shrink-0" />
                     <span className="text-sm font-medium">
-                      Message sent successfully! We'll get back to you soon.
+                      Message sent! We'll get back to you soon.
                     </span>
                   </div>
                 )}
@@ -374,7 +351,6 @@ export default function ContactPage() {
                 {t("contactPage.map.title")}
               </h2>
               <div className="flex-1 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                {/* OpenStreetMap via Nominatim — no API key required */}
                 <iframe
                   width="100%"
                   height="500"
@@ -402,14 +378,8 @@ export default function ContactPage() {
 
       <style>{`
         @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          from { opacity: 0; transform: translateY(30px); }
+          to   { opacity: 1; transform: translateY(0); }
         }
       `}</style>
     </div>

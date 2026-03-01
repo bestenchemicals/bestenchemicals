@@ -2,8 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HeroSection from "./components/HeroSection";
 import CompanySection from "./components/CompanySection";
 import ProductsSection from "./components/ProductsSection";
-import KeyMetricsSection from "./components/KeyMetricsSection";
-import ChatWidget from "./components/ChatWidget";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import ProductsListPage from "./pages/ProductsListPage";
@@ -30,8 +28,7 @@ function HomePage() {
         <HeroSection />
         <CompanySection />
         <ProductsSection />
-        <KeyMetricsSection />
-        <ChatWidget />
+        {/* <ChatWidget /> */}
         <Footer />
       </div>
     </>

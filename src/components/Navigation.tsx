@@ -1,7 +1,8 @@
-import { Atom, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useTranslation } from "../hooks/useTranslation";
+import bestenLogo from "../resources/besten_logo-removebg-preview.png";
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -25,20 +26,22 @@ export default function Navigation() {
           : "bg-black/40 backdrop-blur-sm"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-2 flex items-center justify-between">
         <Link
           to="/"
           className="flex items-center gap-2 group"
           style={{ animation: "slideInLeft 0.6s ease-out" }}
         >
-          <Atom className="w-8 h-8 text-white group-hover:rotate-180 transition-transform duration-700" />
-          <div className="text-white hidden sm:block">
-            <div className="font-bold text-lg">
-              {t("navigation.brand.name")}
-            </div>
-            <div className="text-xs uppercase tracking-wider">
+          <div className="flex flex-col items-start">
+            <img
+              src={bestenLogo}
+              alt="Besten Chemicals"
+              className="h-16 w-auto object-contain scale-150 group-hover:scale-[1.65] transition-all duration-300 brightness-0 invert"
+              style={{ transformOrigin: "left center", marginLeft: "-42px" }}
+            />
+            <span className="text-white/60 text-[10px] uppercase tracking-[0.2em] -mt-1">
               {t("navigation.brand.tagline")}
-            </div>
+            </span>
           </div>
         </Link>
 
@@ -85,22 +88,22 @@ export default function Navigation() {
             {t("navigation.links.products")}
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
           </Link>
-          <a
+          {/* <a
             href="/#services"
             className="hover:text-blue-300 transition-all duration-300 block md:inline relative group"
             onClick={() => setMobileOpen(false)}
           >
             {t("navigation.links.services")}
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
-          </a>
-          <a
+          </a> */}
+          {/* <a
             href="/#news"
             className="hover:text-blue-300 transition-all duration-300 block md:inline relative group"
             onClick={() => setMobileOpen(false)}
           >
             {t("navigation.links.news")}
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
-          </a>
+          </a> */}
           <Link
             to="/contact"
             className="items-center gap-1 hover:text-blue-300 transition-all duration-300 block md:inline relative group"

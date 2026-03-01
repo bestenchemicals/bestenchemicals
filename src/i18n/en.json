@@ -2,7 +2,7 @@
   "navigation": {
     "brand": {
       "name": "Besten Chemicals",
-      "tagline": "Chemical Solutions"
+      "tagline": "Partner in Chemistry"
     },
     "links": {
       "home": "Home",
@@ -14,26 +14,26 @@
     }
   },
   "hero": {
-    "title": "Integrative Innovation, Sustainable",
-    "titleBreak": "Solutions",
+    "title": "A Better Chemistry for Tomorrow...... That Matters....",
+    "titleBreak": "",
     "buttons": {
       "products": "Our Products",
       "services": "Our Services"
     },
-    "sectionTitle": "Chemistry unveiled",
-    "sectionSubtitle": "The key features",
+    "sectionTitle": "",
+    "sectionSubtitle": "",
     "features": {
       "innovative": {
-        "title": "Innovative Chemistry Solutions",
-        "description": "Solar energy is a highly efficient and renewable power source. By harnessing the sun's rays through solar panels"
+        "title": "Vision",
+        "description": "To be a global leader in specialty chemical solutions, driving innovation, sustainability, and performance across industries, while creating lasting value for our customers, communities, and the planet"
       },
       "sustainability": {
-        "title": "Commitment to Sustainability",
-        "description": "With advancements in technology, the installation and maintenance costs of solar panels have significantly decreased"
+        "title": "Mission",
+        "description": "Our mission is to develop and manufacture high-performance specialty chemicals through cutting-edge technology, unwavering quality, and a commitment to environmental responsibility. We strive to build lasting partnerships with our customers by delivering tailored solutions that enable their success in a rapidly evolving world"
       },
       "integrative": {
-        "title": "Integrative Solutions Approach",
-        "description": "Choosing solar energy promotes sustainability by reducing carbon emissions and dependence on non-renewable resources."
+        "title": "Values",
+        "description": "Respect for the individual, openness to development, rational power, respect for the work, workplace and community."
       }
     }
   },
@@ -42,22 +42,23 @@
     "title": "Innovative Chemical Solutions",
     "titleBreak": "for Safety and Wellness",
     "paragraphs": [
-      "In Roman philosophy, the Latin word Salus depicts the Goddess of health and medicine while in Eastern philosophy Zen is the concept signifying balance, harmony and inner peace.",
-      "Besten Chemicals Additives provides a perfect blend of these two concepts to provide solutions to customer's problems thereby protecting both mother nature and human beings in the best possible way."
+      "Founded by a team of experienced technocrats, Besten Chemicals is a next-generation specialty chemicals company dedicated to delivering high-performance, application-driven solutions. With deep technical expertise and industry insight, we bridge the gap between scientific innovation and real-world industrial needs.",
+      "Our focus lies in developing customized specialty chemical solutions that enhance performance, improve efficiency, and create sustainable value for our customers. Through rigorous R&D, strict quality standards, and a customer-centric approach, we strive to be a trusted technology partner across industries.",
+      "At Besten Chemicals, innovation is engineered, quality is assured, and partnerships are built for long-term growth."
     ],
     "imageLabels": {
-      "integrated": "Integrated",
-      "innovative": "Innovative"
+      "integrated": "",
+      "innovative": ""
     }
   },
   "products": {
     "title": "Our Products",
     "items": [
       { "number": "01", "name": "Preservatives" },
-      { "number": "02", "name": "Surfactants" },
-      { "number": "03", "name": "Defoamers" },
-      { "number": "04", "name": "Wetting agents" },
-      { "number": "05", "name": "Pre-Treatment Chemicals" }
+      { "number": "02", "name": "Defoamers" },
+      { "number": "03", "name": "Rheology Modifiers" },
+      { "number": "04", "name": "Dispersing & Wetting Agents" },
+      { "number": "05", "name": "Flow Additives & Matting Agents" }
     ]
   },
   "services": {
@@ -95,7 +96,7 @@
     ]
   },
   "footer": {
-    "description": "Providing innovative chemical solutions for health, wellness, and sustainable industry.",
+    "description": "A Better Chemistry for Tomorrow...... That Matters....",
     "quickLinks": {
       "title": "Quick Links",
       "links": [
@@ -109,18 +110,25 @@
       "title": "Products",
       "links": [
         { "text": "Preservatives", "href": "/product/preservatives" },
-        { "text": "Surfactants", "href": "/product/surfactants" },
         { "text": "Defoamers", "href": "/product/defoamers" },
-        { "text": "Wetting Agents", "href": "/product/wetting-agents" }
+        { "text": "Rheology Modifiers", "href": "/product/rheology" },
+        {
+          "text": "Dispersing & Wetting Agents",
+          "href": "/product/wetting-agents"
+        },
+        {
+          "text": "Flow Additives & Matting Agents",
+          "href": "/product/additives"
+        }
       ]
     },
     "contact": {
       "title": "Contact",
-      "email": "info@bestenchemicals.com",
-      "phone": "+91 8000 0000 00",
+      "email": "sales@bestenchemicals.com",
+      "phone": "+91 9820693121",
       "location": "View Location"
     },
-    "copyright": "2025 Besten CHemicals. All rights reserved.",
+    "copyright": "2025 Besten Chemicals. All rights reserved.",
     "legal": {
       "privacy": "Privacy Policy",
       "terms": "Terms of Service"
@@ -132,7 +140,7 @@
   "productsListPage": {
     "hero": {
       "title": "Our Products",
-      "description": "Explore our range of high-quality chemical products tailored for the health and wellness industry. Designed for safety and sustainability, our solutions meet the highest standards.",
+      "description": "Our range of high-quality chemical products tailored for the health and coating industry.",
       "exploreButton": "Explore our products"
     },
     "sectionLabel": "Our Products",
@@ -141,31 +149,31 @@
         "id": "preservatives",
         "number": "01",
         "name": "Preservatives",
-        "description": "Extend shelf life while maintaining quality and safety"
-      },
-      {
-        "id": "surfactants",
-        "number": "02",
-        "name": "Surfactants",
-        "description": "Reduce surface tension for optimal performance"
+        "description": "Designed to extend the shelf life of your products"
       },
       {
         "id": "defoamers",
-        "number": "03",
+        "number": "02",
         "name": "Defoamers",
-        "description": "Eliminate foam in industrial processes efficiently"
+        "description": "Providing Reliable and Effective Foam Control Agents for a Wide Range of Industries"
+      },
+      {
+        "id": "rheology",
+        "number": "03",
+        "name": "Rheology Modifiers",
+        "description": "For Aqueous Systems"
       },
       {
         "id": "wetting-agents",
         "number": "04",
-        "name": "Wetting agents",
-        "description": "Improve wettability and spreading properties"
+        "name": "Dispersing & Wetting Agents",
+        "description": "Superior Dispersion and Surface Wetting Solutions"
       },
       {
-        "id": "pre-treatment",
+        "id": "additives",
         "number": "05",
-        "name": "Pre-Treatment Chemicals",
-        "description": "Prepare surfaces for optimal chemical processing"
+        "name": "Flow Additives & Matting Agents",
+        "description": "For Powder Coating"
       }
     ]
   },
@@ -177,18 +185,18 @@
     "contactInfo": {
       "email": {
         "title": "Email",
-        "primary": "info@bestenchemicals.com",
-        "secondary": "sales@bestenchemicals.com"
+        "primary": "sales@bestenchemicals.com",
+        "secondary": ""
       },
       "phone": {
         "title": "Phone",
-        "primary": "+91 8000 0000 00",
-        "secondary": "+91 9999 9999 99"
+        "primary": "+91 9820693121",
+        "secondary": ""
       },
       "location": {
         "title": "Location",
         "company": "Besten Chemicals",
-        "address": "Mumbai, India"
+        "address": "91-A /3, Vrindavan Society,Thane West, 400601"
       }
     },
     "form": {
@@ -222,244 +230,103 @@
   "productDetail": {
     "notFound": "Product not found",
     "exploreButton": "Explore",
-    "sectionTitle": "These products provide multiple roles of",
-    "whyChooseTitle": "Why choose our",
     "contactButton": "Contact Us",
     "products": {
       "preservatives": {
         "name": "Preservatives",
-        "tagline": "Reliable Protection for Your Products",
-        "description": "Our preservatives are designed to extend the shelf life of your products while maintaining their quality and safety.",
-        "fullDescription": "Our preservatives are designed to extend the shelf life of your products while maintaining their quality and safety. Engineered to inhibit the growth of microorganisms, our preservatives ensure that your goods remain fresh and effective from production to consumption.",
-        "benefits": [
+        "tagline": "Designed to extend the shelf life of your products",
+        "description": "Engineered to inhibit the growth of microorganisms, our preservatives ensure that your goods remain fresh and effective from production to consumption.",
+        "categories": [
           {
-            "icon": "🛡️",
-            "title": "Safeguarding Health",
-            "description": "Water treatment, Food etc."
+            "title": "In-Can Preservatives — Paint & Coatings",
+            "items": [
+              "Besten WS 1400 (CIT + MIT)",
+              "Besten WS 328 (CIT + MIT)",
+              "Besten BIT – GX (BIT 20%)",
+              "Besten WS 306 (CIT + MIT)",
+              "Besten WS MIB (MIT + BIT)"
+            ]
           },
           {
-            "icon": "✨",
-            "title": "Protecting finished goods",
-            "description": "Toiletries, cosmetic, textile and pharmaceuticals"
+            "title": "Dry Film Preservatives — Paint & Coatings",
+            "items": [
+              "Besten Drf 2010 (Diuron, BCM, OIT)",
+              "Besten Drf 250 (Diuron 50%)"
+            ]
           },
           {
-            "icon": "⚙️",
-            "title": "Protecting industrial processes",
-            "description": "Paper, leather, textile etc"
-          },
-          {
-            "icon": "🌱",
-            "title": "Conserve natural resources",
-            "description": "Woods"
+            "title": "Preservatives — Personal Care Industry",
+            "items": [
+              "Besten Pcare (CIT-MIT Based)",
+              "Besten PEH 691 (Phenoxyethanol and Ethyl Hexylglycerin Blend)"
+            ]
           }
-        ],
-        "applications": [
-          {
-            "category": "Safeguarding Health",
-            "uses": "Water treatment, Food etc."
-          },
-          {
-            "category": "Protecting finished goods",
-            "uses": "Toiletries, cosmetic, textile and pharmaceuticals"
-          },
-          {
-            "category": "Protecting industrial processes",
-            "uses": "Paper, leather, textile etc"
-          },
-          {
-            "category": "Conserve natural resources",
-            "uses": "Woods"
-          }
-        ],
-        "whyChoose": "With our expertise in microbiological testing and certification, we guarantee that our preservatives deliver exceptional efficacy and reliability. Partner with us to enhance your product's durability and maintain its quality, giving you and your customers peace of mind."
-      },
-      "surfactants": {
-        "name": "Surfactants",
-        "tagline": "Superior Wetting and Spreading Properties",
-        "description": "Advanced surfactants that reduce surface tension and improve product performance.",
-        "fullDescription": "Our surfactants are formulated to reduce surface tension effectively, enabling superior wetting and spreading properties. These versatile compounds enhance the performance of cleaning products, personal care items, and industrial applications.",
-        "benefits": [
-          {
-            "icon": "💧",
-            "title": "Superior Wetting",
-            "description": "Enhanced spreading on surfaces"
-          },
-          {
-            "icon": "🧼",
-            "title": "Enhanced Cleaning",
-            "description": "More effective dirt removal"
-          },
-          {
-            "icon": "🌊",
-            "title": "Emulsification",
-            "description": "Better mixing of oil and water"
-          },
-          {
-            "icon": "♻️",
-            "title": "Biodegradable",
-            "description": "Environmental friendly formulations"
-          }
-        ],
-        "applications": [
-          {
-            "category": "Cleaning Products",
-            "uses": "Detergents, soaps, degreasers"
-          },
-          {
-            "category": "Personal Care",
-            "uses": "Shampoos, body washes, cosmetics"
-          },
-          {
-            "category": "Industrial",
-            "uses": "Textile processing, metalworking"
-          },
-          {
-            "category": "Agriculture",
-            "uses": "Pesticide dispersions"
-          }
-        ],
-        "whyChoose": "Our surfactants are scientifically formulated to deliver consistent performance while maintaining environmental responsibility."
+        ]
       },
       "defoamers": {
         "name": "Defoamers",
-        "tagline": "Efficient Foam Control Solutions",
-        "description": "Effective defoaming agents that eliminate foam in industrial and consumer applications.",
-        "fullDescription": "Our defoamers are engineered to quickly and effectively eliminate foam formation in various industrial and consumer applications. They ensure smooth operations and optimal product quality.",
-        "benefits": [
+        "tagline": "Providing Reliable and Effective Foam Control Agents for a Wide Range of Industries",
+        "description": "Our defoamers are engineered to quickly and effectively eliminate foam formation across industrial and consumer applications.",
+        "categories": [
           {
-            "icon": "💨",
-            "title": "Fast Action",
-            "description": "Rapid foam suppression"
+            "title": "Silicone Based",
+            "items": []
           },
           {
-            "icon": "⚡",
-            "title": "Efficient",
-            "description": "Works at low concentrations"
+            "title": "Non-Silicone Based",
+            "items": []
           },
           {
-            "icon": "🔧",
-            "title": "Universal",
-            "description": "Compatible with various systems"
-          },
-          {
-            "icon": "💪",
-            "title": "Stable",
-            "description": "Long-lasting performance"
+            "title": "Mineral Oil Based",
+            "items": []
           }
-        ],
-        "applications": [
+        ]
+      },
+      "rheology": {
+        "name": "Rheology Modifiers",
+        "tagline": "For Aqueous Systems",
+        "description": "Advanced rheology modifiers that provide precise viscosity and flow control for aqueous formulations.",
+        "categories": [
           {
-            "category": "Food Processing",
-            "uses": "Brewing, dairy, juice production"
+            "title": "ASE — Alkali Swellable Emulsion",
+            "items": []
           },
           {
-            "category": "Wastewater Treatment",
-            "uses": "Foam control in treatment plants"
-          },
-          {
-            "category": "Paper & Pulp",
-            "uses": "Production efficiency improvement"
-          },
-          {
-            "category": "Coatings",
-            "uses": "Paint and varnish applications"
+            "title": "HASE — Hydrophobic Modified Alkali Swellable Emulsion",
+            "items": []
           }
-        ],
-        "whyChoose": "Our defoaming solutions are trusted by industry leaders for their reliability and effectiveness in challenging applications."
+        ]
       },
       "wetting-agents": {
-        "name": "Wetting Agents",
-        "tagline": "Improved Surface Wettability",
-        "description": "Advanced wetting agents that improve surface contact and adhesion properties.",
-        "fullDescription": "Our wetting agents enhance the contact between liquids and solid surfaces, improving absorption, spreading, and adhesion properties. Ideal for coatings, textiles, and agricultural applications.",
-        "benefits": [
+        "name": "Dispersing & Wetting Agents",
+        "tagline": "Superior Dispersion and Surface Wetting Solutions",
+        "description": "High-performance dispersing and wetting agents for a broad spectrum of industrial and specialty applications.",
+        "categories": [
           {
-            "icon": "✨",
-            "title": "Enhanced Adhesion",
-            "description": "Better substrate contact"
-          },
-          {
-            "icon": "🎨",
-            "title": "Improved Coverage",
-            "description": "More uniform distribution"
-          },
-          {
-            "icon": "💧",
-            "title": "Better Penetration",
-            "description": "Deeper liquid absorption"
-          },
-          {
-            "icon": "🌟",
-            "title": "Consistent Results",
-            "description": "Reliable performance"
+            "title": "Dispersing Agents",
+            "items": [
+              "Sodium Salt Polyacrylate",
+              "Ammonium Salt Polyacrylate",
+              "Dispersing Agent for Pharmaceuticals, Personal Care & Industrial Applications",
+              "Besten DOSS 03"
+            ]
           }
-        ],
-        "applications": [
-          {
-            "category": "Coatings",
-            "uses": "Paints, varnishes, lacquers"
-          },
-          {
-            "category": "Textiles",
-            "uses": "Fabric processing, dyeing"
-          },
-          {
-            "category": "Agriculture",
-            "uses": "Pesticide and herbicide application"
-          },
-          {
-            "category": "Printing",
-            "uses": "Ink adhesion improvement"
-          }
-        ],
-        "whyChoose": "Our wetting agents provide superior performance and consistency across diverse applications."
+        ]
       },
-      "pre-treatment": {
-        "name": "Pre-Treatment Chemicals",
-        "tagline": "Optimal Surface Preparation",
-        "description": "Specialized pre-treatment chemicals for surface preparation and metal processing.",
-        "fullDescription": "Our pre-treatment chemicals are designed to prepare surfaces for subsequent processes, ensuring optimal adhesion, corrosion resistance, and overall quality. Suitable for metal, plastic, and composite materials.",
-        "benefits": [
+      "additives": {
+        "name": "Flow Additives & Matting Agents",
+        "tagline": "For Powder Coating",
+        "description": "Specialized flow additives and matting agents engineered to deliver consistent finish quality in powder coating applications.",
+        "categories": [
           {
-            "icon": "🔍",
-            "title": "Surface Cleaning",
-            "description": "Thorough contaminant removal"
+            "title": "Flow Additives",
+            "items": ["Bestenflow 460"]
           },
           {
-            "icon": "🛡️",
-            "title": "Corrosion Prevention",
-            "description": "Enhanced protection"
-          },
-          {
-            "icon": "🎯",
-            "title": "Improved Adhesion",
-            "description": "Better coating adherence"
-          },
-          {
-            "icon": "📈",
-            "title": "Quality Enhancement",
-            "description": "Superior finish quality"
+            "title": "Matting Agents",
+            "items": ["Besten Matt"]
           }
-        ],
-        "applications": [
-          {
-            "category": "Metal Treatment",
-            "uses": "Steel, aluminum, copper processing"
-          },
-          {
-            "category": "Automotive",
-            "uses": "Pre-paint preparation"
-          },
-          {
-            "category": "Electronics",
-            "uses": "PCB and component preparation"
-          },
-          {
-            "category": "Heavy Industries",
-            "uses": "Equipment maintenance and preparation"
-          }
-        ],
-        "whyChoose": "Our pre-treatment solutions ensure superior surface preparation for maximum durability and performance."
+        ]
       }
     }
   }

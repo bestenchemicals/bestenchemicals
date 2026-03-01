@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "../hooks/useTranslation";
 
@@ -25,23 +25,16 @@ export default function HeroSection() {
     if (!element) return {};
 
     const rect = element.getBoundingClientRect();
-    const viewportHeight = window.innerHeight;
-    const popupHeight = 400; // Approximate popup height
-
-    // Check if there's enough space below
-    const spaceBelow = viewportHeight - rect.bottom;
+    const popupHeight = 280; // Approximate popup height
     const spaceAbove = rect.top;
 
     const position: PopupPosition = {};
 
-    if (spaceBelow >= popupHeight) {
-      // Position below
-      position.top = "100%";
-    } else if (spaceAbove >= popupHeight) {
-      // Position above
+    if (spaceAbove >= popupHeight) {
+      // Enough space above — open upward
       position.bottom = "100%";
     } else {
-      // Position below anyway, but adjust if needed
+      // Fall back to below
       position.top = "100%";
     }
 
@@ -67,12 +60,9 @@ export default function HeroSection() {
       type: "innovative",
       icon: (
         <div className="grid grid-cols-3 gap-2">
-          <div className="w-4 h-4 rounded-full bg-red-200"></div>
-          <div className="w-4 h-4 rounded-full bg-red-200"></div>
-          <div className="w-4 h-4 rounded-full bg-red-500"></div>
-          <div className="w-4 h-4 rounded-full bg-red-200"></div>
-          <div className="w-4 h-4 rounded-full bg-red-200"></div>
-          <div className="w-4 h-4 rounded-full bg-red-500"></div>
+          <div className="w-6 h-6 rounded-full bg-red-200"></div>
+          <div className="w-6 h-6 rounded-full bg-red-200"></div>
+          <div className="w-6 h-6 rounded-full bg-red-500"></div>
         </div>
       ),
       image:
@@ -94,8 +84,8 @@ export default function HeroSection() {
       type: "integrative",
       icon: (
         <div className="grid grid-cols-2 gap-1">
-          <div className="w-8 h-8 bg-red-300 rounded-full"></div>
-          <div className="w-8 h-8 bg-red-400 rounded-full"></div>
+          <div className="w-6 h-6 bg-red-300 rounded-full"></div>
+          <div className="w-6 h-6 bg-red-400 rounded-full"></div>
         </div>
       ),
       image:
@@ -109,7 +99,7 @@ export default function HeroSection() {
         className="absolute inset-0 z-0"
         style={{
           backgroundImage:
-            "url(https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?auto=compress&cs=tinysrgb&w=1920)",
+            "url(https://images.unsplash.com/photo-1581594549595-35f6edc7b762?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -179,31 +169,57 @@ export default function HeroSection() {
 
                 {activePopup === feature.type && (
                   <div
-                    className="absolute left-0 right-0 mt-8 bg-white rounded-lg shadow-2xl overflow-hidden z-100"
+                    className="absolute bg-white rounded-xl shadow-2xl overflow-hidden z-50"
                     style={{
                       ...popupPosition,
                       animation: "popupSlideIn 0.3s ease-out",
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      width: "560px",
+                      height: "200px",
+                      display: "flex",
+                      flexDirection: "row",
+                      marginBottom: popupPosition.bottom ? "12px" : undefined,
+                      marginTop: popupPosition.top ? "12px" : undefined,
                     }}
                   >
-                    <div className="grid grid-cols-1 md:grid-cols-2 z-100">
-                      <div className="p-8">
-                        <div className="flex gap-2 mb-4">{feature.icon}</div>
-                        <h4 className="text-blue-800 text-2xl font-semibold mb-4">
-                          {t(`hero.features.${feature.type}.title`)}
-                        </h4>
-                        <p className="text-gray-700 leading-relaxed">
-                          {t(`hero.features.${feature.type}.description`)}
-                        </p>
-                      </div>
-                      <div
-                        className="h-64 md:h-full"
+                    {/* Text side */}
+                    <div
+                      style={{
+                        flex: "1 1 0",
+                        padding: "20px 22px",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <div className="flex gap-2 mb-2">{feature.icon}</div>
+                      <h4 className="text-blue-800 text-base font-semibold mb-2 leading-tight">
+                        {t(`hero.features.${feature.type}.title`)}
+                      </h4>
+                      <p
+                        className="text-gray-600 text-xs leading-relaxed"
                         style={{
-                          backgroundImage: `url(${feature.image})`,
-                          backgroundSize: "cover",
-                          backgroundPosition: "center",
+                          display: "-webkit-box",
+                          WebkitLineClamp: 5,
+                          WebkitBoxOrient: "vertical",
+                          overflow: "hidden",
                         }}
-                      ></div>
+                      >
+                        {t(`hero.features.${feature.type}.description`)}
+                      </p>
                     </div>
+                    {/* Image side */}
+                    <div
+                      style={{
+                        width: "200px",
+                        flexShrink: 0,
+                        backgroundImage: `url(${feature.image})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                      }}
+                    ></div>
                   </div>
                 )}
               </div>
@@ -227,11 +243,11 @@ export default function HeroSection() {
         @keyframes popupSlideIn {
           from {
             opacity: 0;
-            transform: translateY(-10px);
+            transform: translateX(-50%) translateY(8px);
           }
           to {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateX(-50%) translateY(0);
           }
         }
       `}</style>

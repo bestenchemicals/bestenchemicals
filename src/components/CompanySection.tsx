@@ -56,23 +56,27 @@ export default function CompanySection() {
           <div className="col-span-1 md:col-span-3">
             <div
               className={`flex items-center gap-2 text-white transition-all duration-700 ${
-                isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
+                isVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 -translate-x-10"
               }`}
             >
               <div className="w-1 h-6 bg-blue-500"></div>
-              <span className="text-xs md:text-sm">{t('company.label')}</span>
+              <span className="text-xs md:text-sm">{t("company.label")}</span>
             </div>
           </div>
 
           <div className="col-span-1 md:col-span-9">
             <h2
               className={`text-3xl md:text-5xl font-light text-white mb-6 md:mb-8 leading-tight transition-all duration-700 delay-100 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
               }`}
             >
-              {t('company.title')}
+              {t("company.title")}
               <br />
-              {t('company.titleBreak')}
+              {t("company.titleBreak")}
             </h2>
 
             <div className="space-y-4 md:space-y-6 text-white/80 text-base md:text-lg leading-relaxed mb-8 md:mb-12">
@@ -80,7 +84,9 @@ export default function CompanySection() {
                 <p
                   key={index}
                   className={`transition-all duration-700 ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                    isVisible
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-10"
                   }`}
                   style={{ transitionDelay: `${200 + index * 100}ms` }}
                 >
@@ -92,7 +98,7 @@ export default function CompanySection() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div
                 className={`relative h-48 md:h-64 rounded-lg overflow-hidden group transition-all duration-700 delay-300 ${
-                  isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+                  isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
                 }`}
               >
                 <img
@@ -103,16 +109,20 @@ export default function CompanySection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
                   <div className="flex items-center justify-between text-white">
-                    <span className="text-xl font-light">{t('company.imageLabels.integrated')}</span>
+                    <span className="text-xl font-light">
+                      {t("company.imageLabels.integrated")}
+                    </span>
                     <div className="w-20 h-px bg-white"></div>
-                    <span className="text-xl font-light">{t('company.imageLabels.innovative')}</span>
+                    <span className="text-xl font-light">
+                      {t("company.imageLabels.innovative")}
+                    </span>
                   </div>
                 </div>
               </div>
 
               <div
                 className={`relative h-48 md:h-64 rounded-lg overflow-hidden group transition-all duration-700 delay-400 ${
-                  isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+                  isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
                 }`}
               >
                 <img
@@ -121,6 +131,17 @@ export default function CompanySection() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                  <div className="flex items-center justify-between text-white">
+                    <span className="text-xl font-light">
+                      {t("company.imageLabels.integrated")}
+                    </span>
+                    <div className="w-20 h-px bg-white"></div>
+                    <span className="text-xl font-light">
+                      {t("company.imageLabels.innovative")}
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

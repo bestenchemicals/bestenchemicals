@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { useTranslation } from "../hooks/useTranslation";
+import products_hero_img from "../resources/products_hero.png";
 
 export default function ProductsListPage() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -42,8 +43,7 @@ export default function ProductsListPage() {
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1694230155228-cdde50083573?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+            backgroundImage: `url(${products_hero_img})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

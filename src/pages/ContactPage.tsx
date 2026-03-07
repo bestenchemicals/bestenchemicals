@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { useTranslation } from "../hooks/useTranslation";
+import contact_img from "../resources/contact.jpg";
 
 // ---------------------------------------------------------------------------
 // Formspree setup (free, no backend, works with your GoDaddy email):
@@ -85,12 +86,11 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative min-h-96 flex flex-col pt-20">
         <div
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-4"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1742137587512-1276fbcf973c?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+            backgroundImage: `url(${contact_img})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition:"center",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>

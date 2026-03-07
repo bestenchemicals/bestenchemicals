@@ -5,7 +5,7 @@ import { useTranslation } from "../hooks/useTranslation";
 import home_img from "../resources/home.jpg";
 import values_img from "../resources/values.jpg";
 import mission_img from "../resources/mission.jpg";
-import vision_img from "../resources/main_vision.png";
+import vision_img from "../resources/vision_new.png";
 
 type FeatureType = "innovative" | "sustainability" | "integrative";
 

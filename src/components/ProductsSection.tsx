@@ -2,6 +2,11 @@ import { useState, useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "../hooks/useTranslation";
 import { Link } from "react-router-dom";
+import preserv_one_img from "../resources/preserv_one.jpg";
+import defoam_one_img from "../resources/defoam_one.jpg";
+import rheolo_one_img from "../resources/rheology_one.jpg";
+import wetting_one_img from "../resources/wetting_one.jpg";
+import matting_one_img from "../resources/matting_one.jpg";
 
 interface Product {
   id: string;
@@ -20,28 +25,23 @@ interface Service {
 const productData: { slug: string; heroImage: string }[] = [
   {
     slug: "preservatives",
-    heroImage:
-      "https://images.pexels.com/photos/8325710/pexels-photo-8325710.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    heroImage: preserv_one_img,
   },
   {
     slug: "defoamers",
-    heroImage:
-      "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    heroImage: defoam_one_img,
   },
   {
     slug: "rheology",
-    heroImage:
-      "https://images.pexels.com/photos/7723534/pexels-photo-7723534.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    heroImage: rheolo_one_img,
   },
   {
     slug: "wetting-agents",
-    heroImage:
-      "https://images.pexels.com/photos/3735706/pexels-photo-3735706.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    heroImage: wetting_one_img,
   },
   {
     slug: "additives",
-    heroImage:
-      "https://images.unsplash.com/photo-1598207548924-fcab47e9b272?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    heroImage: matting_one_img,
   },
 ];
 

@@ -2,7 +2,7 @@ import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useTranslation } from "../hooks/useTranslation";
-import bestenLogo from "../resources/besten_logo-removebg-preview.png";
+import newlogoo from "../resources/newlogo.png";
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -34,9 +34,9 @@ export default function Navigation() {
         >
           <div className="flex flex-col items-start">
             <img
-              src={bestenLogo}
+              src={newlogoo}
               alt="Besten Chemicals"
-              className="h-16 w-auto object-contain scale-150 group-hover:scale-[1.65] transition-all duration-300 brightness-0 invert"
+              className="h-16 w-auto object-contain scale-150 group-hover:scale-[1.65] transition-all duration-300"
               style={{ transformOrigin: "left center", marginLeft: "-42px" }}
             />
             <span className="text-white/60 text-[10px] uppercase tracking-[0.2em] -mt-1">

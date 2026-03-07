@@ -42,7 +42,7 @@
     "title": "Innovative Chemical Solutions",
     "titleBreak": "for Safety and Wellness",
     "paragraphs": [
-      "Founded by a team of experienced technocrats, Besten Chemicals is a next-generation specialty chemicals company dedicated to delivering high-performance, application-driven solutions. With deep technical expertise and industry insight, we bridge the gap between scientific innovation and real-world industrial needs.",
+      "Founded by a team of experienced technocrats, Manufacturing facility located at Navi Mumbai, Besten Chemicals is a next-generation specialty chemicals company dedicated to delivering high-performance, application-driven solutions. With deep technical expertise and industry insight, we bridge the gap between scientific innovation and real-world industrial needs.",
       "Our focus lies in developing customized specialty chemical solutions that enhance performance, improve efficiency, and create sustainable value for our customers. Through rigorous R&D, strict quality standards, and a customer-centric approach, we strive to be a trusted technology partner across industries.",
       "At Besten Chemicals, innovation is engineered, quality is assured, and partnerships are built for long-term growth."
     ],
@@ -250,8 +250,8 @@
           {
             "title": "Dry Film Preservatives — Paint & Coatings",
             "items": [
-              "Besten Drf 2010 (Diuron, BCM, OIT)",
-              "Besten Drf 250 (Diuron 50%)"
+              "Besten DRF 2010 (Diuron, BCM, OIT)",
+              "Besten DRF 250 (Diuron 50%)"
             ]
           },
           {
@@ -270,10 +270,6 @@
         "categories": [
           {
             "title": "Silicone Based",
-            "items": []
-          },
-          {
-            "title": "Non-Silicone Based",
             "items": []
           },
           {

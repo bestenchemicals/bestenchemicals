@@ -2,6 +2,10 @@ import { ArrowRight, ArrowRightIcon } from "lucide-react";
 import { useState, useRef, useCallback, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "../hooks/useTranslation";
+import home_img from "../resources/home.jpg";
+import values_img from "../resources/values.jpg";
+import mission_img from "../resources/mission.jpg";
+import vision_img from "../resources/main_vision.png";
 
 type FeatureType = "innovative" | "sustainability" | "integrative";
 
@@ -75,8 +79,7 @@ export default function HeroSection() {
           <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-red-500" />
         </div>
       ),
-      image:
-        "https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: vision_img,
     },
     {
       type: "sustainability",
@@ -87,8 +90,7 @@ export default function HeroSection() {
           <div className="w-5 h-5 sm:w-6 sm:h-6 bg-orange-300 rounded" />
         </div>
       ),
-      image:
-        "https://images.pexels.com/photos/5029857/pexels-photo-5029857.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: mission_img,
     },
     {
       type: "integrative",
@@ -98,8 +100,7 @@ export default function HeroSection() {
           <div className="w-5 h-5 sm:w-6 sm:h-6 bg-red-400 rounded-full" />
         </div>
       ),
-      image:
-        "https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: values_img,
     },
   ];
 
@@ -115,11 +116,21 @@ export default function HeroSection() {
   return (
     <section id="home" className="relative min-h-screen flex flex-col">
       {/* Background */}
-      <div
+      {/* <div
         className="absolute inset-0 z-0"
         style={{
           backgroundImage:
             "url(https://images.unsplash.com/photo-1581594549595-35f6edc7b762?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
+      </div> */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${home_img})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -286,7 +297,7 @@ function FeatureCard({
       {/* ── Desktop hover popup ── */}
       {isActive && isHoverDevice && (
         <div
-          className="absolute bg-white rounded-xl shadow-2xl overflow-hidden z-50 flex flex-row"
+          className="absolute bg-white rounded-xl shadow-2xl overflow-hidden z-50 flex flex-col"
           style={{
             ...(direction === "above"
               ? { bottom: "calc(100% + 12px)" }
@@ -294,7 +305,8 @@ function FeatureCard({
             left: `${centreLeft}px`,
             transform: "translateX(-50%)",
             width: `${popupWidth}px`,
-            height: "180px",
+            height: "auto",
+            maxHeight: "480px",
             animation:
               direction === "above"
                 ? "popupSlideInAbove 0.25s ease-out"
@@ -311,7 +323,7 @@ function FeatureCard({
           className="mt-4 bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col sm:flex-row"
           style={{
             animation: "sheetUp 0.25s ease-out",
-            maxHeight: "260px",
+            maxHeight: "460px",
           }}
         >
           <PopupContent feature={feature} t={t} mobile />
@@ -348,7 +360,7 @@ function PopupContent({
           className="text-gray-600 text-xs leading-relaxed"
           style={{
             display: "-webkit-box",
-            WebkitLineClamp: mobile ? 4 : 5,
+            WebkitLineClamp: mobile ? 6 : 8,
             WebkitBoxOrient: "vertical",
             overflow: "hidden",
           }}
@@ -359,9 +371,7 @@ function PopupContent({
 
       {/* Image */}
       <div
-        className={`flex-shrink-0 ${
-          mobile ? "order-1 w-full h-32 sm:w-40 sm:h-auto" : "w-44"
-        }`}
+        className={`flex-shrink-0 ${mobile ? "hidden" : "w-full h-36"}`}
         style={{
           backgroundImage: `url(${feature.image})`,
           backgroundSize: "cover",

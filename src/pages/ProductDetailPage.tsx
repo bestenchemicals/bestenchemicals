@@ -4,12 +4,15 @@ import { useEffect, useRef, useState } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { useTranslation } from "../hooks/useTranslation";
+import preserv_two_img from "../resources/preserv_two.jpg";
+import defoam_two_img from "../resources/defoam_two.png";
+import rheol_two_img from "../resources/rheology_two.png";
+import matting_two_img from "../resources/matting_two.png";
 
 const productImages: Record<string, { heroImage: string; images: string[] }> = {
   // Preservatives: microbiology + antimicrobial lab testing
   preservatives: {
-    heroImage:
-      "https://images.pexels.com/photos/8325710/pexels-photo-8325710.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    heroImage: preserv_two_img,
     images: [
       "https://images.pexels.com/photos/5726794/pexels-photo-5726794.jpeg?auto=compress&cs=tinysrgb&w=800",
       "https://images.unsplash.com/photo-1595154038355-f717191eaab4?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Petri dish bacterial culture (fixed)
@@ -18,8 +21,7 @@ const productImages: Record<string, { heroImage: string; images: string[] }> = {
 
   // Defoamers: industrial liquid processing & mixing tanks
   defoamers: {
-    heroImage:
-      "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Industrial mixing tank (fixed)
+    heroImage: defoam_two_img,
     images: [
       "https://images.unsplash.com/photo-1707135719639-409915fbc68f?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://images.unsplash.com/photo-1652947965461-9ec15359520a?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Liquid chemical processing (fixed)
@@ -28,8 +30,7 @@ const productImages: Record<string, { heroImage: string; images: string[] }> = {
 
   // Rheology Modifiers: viscosity / fluid behavior testing
   rheology: {
-    heroImage:
-      "https://images.pexels.com/photos/7723534/pexels-photo-7723534.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    heroImage: rheol_two_img,
     images: [
       "https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=800",
       "https://images.pexels.com/photos/954585/pexels-photo-954585.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -38,8 +39,7 @@ const productImages: Record<string, { heroImage: string; images: string[] }> = {
 
   // Dispersing & Wetting Agents: surfactant chemistry & liquid dispersion
   "wetting-agents": {
-    heroImage:
-      "https://images.pexels.com/photos/3735706/pexels-photo-3735706.jpeg?auto=compress&cs=tinysrgb&w=1920", // Lab pipetting / dispersion (fixed)
+    heroImage: "https://i.ytimg.com/vi/KqYmB4yO8EY/maxresdefault.jpg",
     images: [
       "https://images.pexels.com/photos/8532826/pexels-photo-8532826.jpeg?auto=compress&cs=tinysrgb&w=800",
       "https://images.pexels.com/photos/8544960/pexels-photo-8544960.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -48,8 +48,7 @@ const productImages: Record<string, { heroImage: string; images: string[] }> = {
 
   // Flow Additives & Matting Agents: powder coatings & material finishing
   additives: {
-    heroImage:
-      "https://images.unsplash.com/photo-1598207548924-fcab47e9b272?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Powder coating process (fixed)
+    heroImage: matting_two_img,
     images: [
       "https://images.unsplash.com/photo-1513828742140-ccaa28f3eda0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Industrial production line (fixed)
       "https://images.unsplash.com/photo-1751606803218-67f4b896fc4e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Material processing (fixed)

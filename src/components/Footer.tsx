@@ -2,7 +2,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "../hooks/useTranslation";
-import bestenLogo from "../resources/besten_logo-removebg-preview.png";
+import bestenLogo from "../resources/bestenlogo_updated.png";
 
 export default function Footer() {
   const footerRef = useRef<HTMLDivElement>(null);

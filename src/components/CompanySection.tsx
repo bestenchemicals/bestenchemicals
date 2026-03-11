@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
-import { useTranslation } from '../hooks/useTranslation';
+import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "../hooks/useTranslation";
+import { useLocation } from "react-router-dom";
 
 export default function CompanySection() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -27,12 +28,25 @@ export default function CompanySection() {
     };
   }, []);
 
-  const paragraphs = tArray('company.paragraphs');
+  const paragraphs = tArray("company.paragraphs");
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const sectionId = location.hash.replace("#", "");
+      // Small delay to ensure DOM is ready
+      setTimeout(() => {
+        document
+          .getElementById(sectionId)
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }, [location.hash]);
 
   return (
     <section
       ref={sectionRef}
-      id="company"
       className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 py-12 md:py-20 relative overflow-hidden"
     >
       {/* Animated background elements */}

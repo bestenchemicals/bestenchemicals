@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import HeroSection from "./components/HeroSection";
 import CompanySection from "./components/CompanySection";
 import ProductsSection from "./components/ProductsSection";
@@ -8,7 +8,7 @@ import ProductsListPage from "./pages/ProductsListPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import ContactPage from "./pages/ContactPage";
 import ChemicalLoader from "./components/ChemicalLoader";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function HomePage() {
   const [loading, setLoading] = useState(true);
@@ -16,6 +16,21 @@ function HomePage() {
   const handleLoadComplete = () => {
     setLoading(false);
   };
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const sectionId = location.hash.replace("#", "");
+      // Small delay to ensure DOM is ready
+      setTimeout(() => {
+        document
+          .getElementById(sectionId)
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }, [location.hash]);
+
   return (
     <>
       {loading && <ChemicalLoader onLoadComplete={handleLoadComplete} />}
@@ -26,7 +41,9 @@ function HomePage() {
       >
         <Navigation />
         <HeroSection />
-        <CompanySection />
+        <div id="company">
+          <CompanySection />
+        </div>
         <ProductsSection />
         {/* <ChatWidget /> */}
         <Footer />

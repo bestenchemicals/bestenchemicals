@@ -29,6 +29,10 @@ export default function ContactPage() {
   const { t } = useTranslation();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) setIsVisible(true);
@@ -90,7 +94,7 @@ export default function ContactPage() {
           style={{
             backgroundImage: `url(${contact_img})`,
             backgroundSize: "cover",
-            backgroundPosition:"center",
+            backgroundPosition: "center",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
@@ -170,6 +174,16 @@ export default function ContactPage() {
                   className="hover:text-blue-800 transition-colors"
                 >
                   {t("contactPage.contactInfo.phone.primary")}
+                </a>
+              </p>
+              <p className="text-gray-600">
+                <a
+                  href={`tel:${t(
+                    "contactPage.contactInfo.phonenew.primary"
+                  ).replace(/\s/g, "")}`}
+                  className="hover:text-blue-800 transition-colors"
+                >
+                  {t("contactPage.contactInfo.phonenew.primary")}
                 </a>
               </p>
               <p className="text-gray-600">

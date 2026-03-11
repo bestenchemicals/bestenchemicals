@@ -25,11 +25,11 @@
     "features": {
       "innovative": {
         "title": "Vision",
-        "description": "To be a global leader in specialty chemical solutions, driving innovation, sustainability, and performance across industries, while creating lasting value for our customers, communities, and the planet"
+        "description": "To be a global leader in specialty chemical solutions, driving innovation, sustainability, and performance across industries, while creating lasting value for our customers, communities, and the planet."
       },
       "sustainability": {
         "title": "Mission",
-        "description": "Our mission is to develop and manufacture high-performance specialty chemicals through cutting-edge technology, unwavering quality, and a commitment to environmental responsibility. We strive to build lasting partnerships with our customers by delivering tailored solutions that enable their success in a rapidly evolving world"
+        "description": "Our mission is to develop and manufacture high-performance specialty chemicals through cutting-edge technology, unwavering quality, and a commitment to environmental responsibility. We strive to build lasting partnerships with our customers by delivering tailored solutions that enable their success in a rapidly evolving world."
       },
       "integrative": {
         "title": "Values",
@@ -126,6 +126,7 @@
       "title": "Contact",
       "email": "sales@bestenchemicals.com",
       "phone": "+91 9820693121",
+      "phone2": "+91 9769607203",
       "location": "View Location"
     },
     "copyright": "2025 Besten Chemicals. All rights reserved.",
@@ -191,6 +192,11 @@
       "phone": {
         "title": "Phone",
         "primary": "+91 9820693121",
+        "secondary": ""
+      },
+      "phonenew": {
+        "title": "Phone",
+        "primary": "+91 9769607203",
         "secondary": ""
       },
       "location": {

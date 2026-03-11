@@ -2,7 +2,7 @@ import { ArrowRight, ArrowRightIcon } from "lucide-react";
 import { useState, useRef, useCallback, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "../hooks/useTranslation";
-import home_img from "../resources/home.jpg";
+import home_img from "../resources/home_new.jpg";
 import values_img from "../resources/values.jpg";
 import mission_img from "../resources/mission.jpg";
 import vision_img from "../resources/vision_new.png";
@@ -360,7 +360,7 @@ function PopupContent({
           className="text-gray-600 text-xs leading-relaxed"
           style={{
             display: "-webkit-box",
-            WebkitLineClamp: mobile ? 6 : 8,
+            WebkitLineClamp: mobile ? 9 : 11,
             WebkitBoxOrient: "vertical",
             overflow: "hidden",
           }}

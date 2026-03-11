@@ -2,12 +2,14 @@ import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useTranslation } from "../hooks/useTranslation";
-import newlogoo from "../resources/newlogo.png";
+import newlogoo from "../resources/bestenlogo_updated.png";
+import { useScrollToSection } from "../hooks/useScrollToSection";
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { t } = useTranslation();
+  const scrollToSection = useScrollToSection();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +39,7 @@ export default function Navigation() {
               src={newlogoo}
               alt="Besten Chemicals"
               className="h-16 w-auto object-contain scale-150 group-hover:scale-[1.65] transition-all duration-300"
-              style={{ transformOrigin: "left center", marginLeft: "-42px" }}
+              style={{ transformOrigin: "left center", marginLeft: "-22px" }}
             />
             <span className="text-white/60 text-[10px] uppercase tracking-[0.2em] -mt-1">
               {t("navigation.brand.tagline")}
@@ -75,7 +77,11 @@ export default function Navigation() {
           <a
             href="/#company"
             className="hover:text-blue-300 transition-all duration-300 block md:inline relative group"
-            onClick={() => setMobileOpen(false)}
+            onClick={(e) => {
+              e.preventDefault();
+              setMobileOpen(false);
+              scrollToSection("company");
+            }}
           >
             {t("navigation.links.company")}
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>

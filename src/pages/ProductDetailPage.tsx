@@ -6,53 +6,48 @@ import Footer from "../components/Footer";
 import { useTranslation } from "../hooks/useTranslation";
 import preserv_two_img from "../resources/preserv_two.jpg";
 import defoam_two_img from "../resources/defoam_two.png";
-import rheol_two_img from "../resources/rheology_two.png";
+import rheol_two_img from "../resources/rhelogy_two.png";
 import matting_two_img from "../resources/matting_two.png";
+import preserv_sm_one from "../resources/preservatives_sm_one.png";
+import preserv_sm_two from "../resources/preservatives_sm_two.png";
+import defoam_sm_one from "../resources/defoam_sm_one.jpeg";
+import defoam_sm_two from "../resources/defoam_sm_two.jpg";
+import rheo_sm_one from "../resources/rheology_sm_one.png";
+import rheo_sm_two from "../resources/rheology_sm_two.jpg";
+import wetting_sm_one from "../resources/wetting_sm_one.png";
+import wetting_sm_two from "../resources/wetting_sm_two.png";
+import matting_sm_one from "../resources/matting_sm_one.jpg";
+import matting_sm_two from "../resources/matting_sm_two.jpg";
 
 const productImages: Record<string, { heroImage: string; images: string[] }> = {
   // Preservatives: microbiology + antimicrobial lab testing
   preservatives: {
     heroImage: preserv_two_img,
-    images: [
-      "https://images.pexels.com/photos/5726794/pexels-photo-5726794.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "https://images.unsplash.com/photo-1595154038355-f717191eaab4?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Petri dish bacterial culture (fixed)
-    ],
+    images: [preserv_sm_one, preserv_sm_two],
   },
 
   // Defoamers: industrial liquid processing & mixing tanks
   defoamers: {
     heroImage: defoam_two_img,
-    images: [
-      "https://images.unsplash.com/photo-1707135719639-409915fbc68f?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1652947965461-9ec15359520a?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Liquid chemical processing (fixed)
-    ],
+    images: [defoam_sm_one, defoam_sm_two],
   },
 
   // Rheology Modifiers: viscosity / fluid behavior testing
   rheology: {
     heroImage: rheol_two_img,
-    images: [
-      "https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "https://images.pexels.com/photos/954585/pexels-photo-954585.jpeg?auto=compress&cs=tinysrgb&w=800",
-    ],
+    images: [rheo_sm_one, rheo_sm_two],
   },
 
   // Dispersing & Wetting Agents: surfactant chemistry & liquid dispersion
   "wetting-agents": {
     heroImage: "https://i.ytimg.com/vi/KqYmB4yO8EY/maxresdefault.jpg",
-    images: [
-      "https://images.pexels.com/photos/8532826/pexels-photo-8532826.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "https://images.pexels.com/photos/8544960/pexels-photo-8544960.jpeg?auto=compress&cs=tinysrgb&w=800",
-    ],
+    images: [wetting_sm_one, wetting_sm_two],
   },
 
   // Flow Additives & Matting Agents: powder coatings & material finishing
   additives: {
     heroImage: matting_two_img,
-    images: [
-      "https://images.unsplash.com/photo-1513828742140-ccaa28f3eda0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Industrial production line (fixed)
-      "https://images.unsplash.com/photo-1751606803218-67f4b896fc4e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Material processing (fixed)
-    ],
+    images: [matting_sm_one, matting_sm_two],
   },
 };
 
@@ -63,6 +58,10 @@ export default function ProductDetailPage() {
   const [isVisible, setIsVisible] = useState(false);
   const [openCategory, setOpenCategory] = useState<number | null>(0);
   const { t, tArray } = useTranslation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -113,7 +112,7 @@ export default function ProductDetailPage() {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/45 to-black/65" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/30" />
         </div>
 
         <div
@@ -121,18 +120,41 @@ export default function ProductDetailPage() {
           style={{ animation: "fadeInUp 1s ease-out" }}
         >
           <div className="flex flex-col justify-center flex-1">
-            <div className="inline-flex items-center gap-2 mb-6">
-              <div className="w-8 h-px bg-white/60" />
-              <span className="text-white/70 text-sm tracking-widest uppercase font-medium">
-                Product
-              </span>
+            {/* Localized dark backdrop just for the text block */}
+            <div
+              className="inline-block p-6 rounded-2xl"
+              style={{
+                background:
+                  "linear-gradient(135deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.15) 100%)",
+                backdropFilter: "blur(2px)",
+                WebkitBackdropFilter: "blur(2px)",
+              }}
+            >
+              <div className="inline-flex items-center gap-2 mb-6">
+                <div className="w-8 h-px bg-white/70" />
+                <span
+                  className="text-white/80 text-sm tracking-widest uppercase font-medium"
+                  style={{ textShadow: "0 1px 4px rgba(0,0,0,0.6)" }}
+                >
+                  Product
+                </span>
+              </div>
+              <h1
+                className="text-4xl md:text-6xl font-light text-white mb-4 leading-tight"
+                style={{
+                  textShadow:
+                    "0 2px 12px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.8)",
+                }}
+              >
+                {productName}
+              </h1>
+              <p
+                className="text-lg text-white/90 max-w-2xl leading-relaxed"
+                style={{ textShadow: "0 1px 6px rgba(0,0,0,0.6)" }}
+              >
+                {tagline}
+              </p>
             </div>
-            <h1 className="text-4xl md:text-6xl font-light text-white mb-4 leading-tight">
-              {productName}
-            </h1>
-            <p className="text-lg text-white/80 max-w-2xl leading-relaxed">
-              {tagline}
-            </p>
           </div>
 
           <div className="py-8 md:py-12">

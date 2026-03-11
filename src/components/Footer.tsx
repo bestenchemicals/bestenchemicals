@@ -48,8 +48,8 @@ export default function Footer() {
               <img
                 src={bestenLogo}
                 alt="Besten Chemicals"
-                className="h-16 w-auto object-contain scale-150 group-hover:scale-[1.65] transition-all duration-300 brightness-0 invert"
-                style={{ transformOrigin: "left center", marginLeft: "-42px" }}
+                className="h-16 w-auto object-contain scale-150 group-hover:scale-[1.65] transition-all duration-300"
+                style={{ transformOrigin: "left center", marginLeft: "-22px" }}
               />
               <span className="text-white/60 text-[10px] uppercase tracking-[0.2em] -mt-1">
                 {t("navigation.brand.tagline")}
@@ -144,6 +144,15 @@ export default function Footer() {
                   className="hover:text-white transition-colors"
                 >
                   {t("footer.contact.phone")}
+                </a>
+              </li>
+              <li className="flex items-center gap-2 group">
+                <Phone className="w-4 h-4 group-hover:text-blue-400 transition-colors" />
+                <a
+                  href={`tel:${t("footer.contact.phone").replace(/\s/g, "")}`}
+                  className="hover:text-white transition-colors"
+                >
+                  {t("footer.contact.phone2")}
                 </a>
               </li>
               <li className="flex items-start gap-2 group">

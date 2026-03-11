@@ -12,6 +12,10 @@ export default function ProductsListPage() {
   const { t, tArray } = useTranslation();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

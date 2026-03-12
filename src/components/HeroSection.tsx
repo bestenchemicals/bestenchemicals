@@ -140,7 +140,7 @@ export default function HeroSection() {
 
       {/* Hero copy */}
       <div
-        className="relative z-10 flex-1 flex flex-col justify-end px-4 sm:px-6 max-w-7xl mx-auto w-full pb-24 sm:pb-20 md:pb-10"
+        className="relative z-10 flex-1 flex flex-col justify-end px-4 sm:px-6 max-w-7xl mx-auto w-full pt-24 sm:pt-20 md:pt-0 pb-24 sm:pb-20 md:pb-10"
         style={{ animation: "fadeInUp 1s ease-out" }}
       >
         <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-yellow-200 mb-8 md:mb-32 leading-tight">

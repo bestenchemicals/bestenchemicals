@@ -9,7 +9,6 @@ import vision_img from "../resources/vision_new.png";
 
 type FeatureType = "innovative" | "sustainability" | "integrative";
 
-/** True when the device supports hover (mouse/trackpad), false for touch. */
 function useIsHoverDevice() {
   const [isHover, setIsHover] = useState(false);
   useEffect(() => {
@@ -22,7 +21,6 @@ function useIsHoverDevice() {
   return isHover;
 }
 
-/** Returns "above" | "below" based on available viewport space. */
 function usePopupDirection(
   ref: React.RefObject<HTMLDivElement | null>,
   active: boolean
@@ -36,7 +34,6 @@ function usePopupDirection(
   return dir;
 }
 
-/** Clamps a popup so it never overflows the viewport horizontally. */
 function useClampedLeft(
   ref: React.RefObject<HTMLDivElement | null>,
   active: boolean,
@@ -54,7 +51,6 @@ function useClampedLeft(
       margin + half,
       Math.min(centre, vw - half - margin)
     );
-    // Return offset relative to the element's left edge
     setLeft(clamped - rect.left);
   }, [active, ref, popupWidth]);
   return left;
@@ -114,19 +110,8 @@ export default function HeroSection() {
   );
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col">
+    <section id="home" className="hero-section relative flex flex-col">
       {/* Background */}
-      {/* <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1581594549595-35f6edc7b762?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
-      </div> */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -138,90 +123,133 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
       </div>
 
-      {/* Hero copy */}
-      <div
-        className="relative z-10 flex-1 flex flex-col justify-end px-4 sm:px-6 max-w-7xl mx-auto w-full pt-24 sm:pt-20 md:pt-0 pb-24 sm:pb-20 md:pb-10"
-        style={{ animation: "fadeInUp 1s ease-out" }}
-      >
-        <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-yellow-200 mb-8 md:mb-32 leading-tight">
-          {t("hero.title")}
-          <br />
-          {t("hero.titleBreak")}
-        </h1>
+      {/*
+        LAYOUT:
+        ┌─────────────────────────────────────────────────────────┐
+        │  navbar-spacer (104px fixed)                            │
+        │                                                         │
+        │  flex-1 top spacer   (mobile: absorbs ALL free space)   │
+        │                      (desktop: splits with bottom ↓)    │
+        │                                                         │
+        │  TITLE  ← desktop: vertically centred in free space     │
+        │           mobile: sits just above buttons               │
+        │                                                         │
+        │  flex-1 bottom spacer  (desktop only)                   │
+        │                                                         │
+        │  buttons  ← always at bottom, close to feature cards    │
+        │  section label                                          │
+        │  feature cards                                          │
+        └─────────────────────────────────────────────────────────┘
+      */}
+      <div className="relative z-10 flex flex-col h-full flex-1 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+        {/* Fixed navbar clearance — never shrinks */}
+        <div className="navbar-spacer flex-shrink-0" />
 
-        <div
-          className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8 md:mt-12"
-          style={{ width: "fit-content", maxWidth: "100%" }}
-        >
-          {/* Primary Button */}
-          <Link
-            to="/products"
-            className="group relative px-4 sm:px-6 py-3.5 sm:py-4 bg-white text-black rounded-full flex items-center justify-center gap-3 text-sm sm:text-base whitespace-nowrap overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:scale-105"
-            style={{ animation: "fadeInUp 1s ease-out 0.2s both" }}
+        {/* Top elastic spacer — on mobile this absorbs ALL free space (title stays low)
+            On desktop the space is split with the bottom spacer, lifting title to centre */}
+        <div className="flex-1" />
+
+        {/* Title — on desktop sits between two equal spacers = vertically centred */}
+        <div style={{ animation: "fadeInUp 1s ease-out" }}>
+          <h1
+            className="font-semibold text-yellow-200 leading-tight"
+            style={{
+              fontSize: "clamp(1.6rem, 4.5vw, 4.5rem)",
+              marginBottom: "clamp(1.5rem, 4vh, 3rem)",
+            }}
           >
-            {/* Shimmer sweep on hover */}
-            <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-black/10 to-transparent skew-x-12" />
-
-            <span className="relative">{t("hero.buttons.products")}</span>
-
-            {/* Arrow slides right and bounces */}
-            <ArrowRight className="relative w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 transition-transform duration-300 group-hover:translate-x-1.5" />
-          </Link>
-
-          {/* Secondary Button */}
-          <Link to="/contact">
-            <button
-              className="group relative px-4 sm:px-6 py-3.5 sm:py-4 bg-transparent border border-white/50 text-white rounded-full flex items-center justify-center gap-3 text-sm sm:text-base whitespace-nowrap overflow-hidden transition-all duration-300 hover:border-white hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]"
-              style={{ animation: "fadeInUp 1s ease-out 0.4s both" }}
-            >
-              {/* Frosted fill that wipes in from left */}
-              <span className="absolute inset-0 translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-out bg-white/10 rounded-full" />
-
-              <span className="relative">{t("hero.buttons.services")}</span>
-
-              {/* Arrow rotates to point more upright and slides */}
-              <ArrowRightIcon className="relative w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 -rotate-45 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:rotate-[-55deg]" />
-            </button>
-          </Link>
+            {t("hero.title")}
+            <br />
+            {t("hero.titleBreak")}
+          </h1>
         </div>
-      </div>
 
-      {/* Feature cards */}
-      <div
-        className="relative z-10 py-8 md:py-12 px-4 sm:px-6"
-        style={{ animation: "fadeInUp 1s ease-out 0.6s both" }}
-      >
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-5 md:mb-6">
-            <h2 className="text-white text-lg sm:text-xl md:text-2xl font-light mb-1.5 sm:mb-2">
-              {t("hero.sectionTitle")}
-            </h2>
-            <p className="text-white/80 text-xs sm:text-sm">
-              {t("hero.sectionSubtitle")}
-            </p>
+        {/* Bottom elastic spacer — desktop only, pushes buttons+cards to the bottom */}
+        <div className="flex-1 hidden md:block" />
+
+        {/* Buttons + feature cards always at bottom */}
+        <div className="pb-8 sm:pb-10 md:pb-6">
+          {/* Buttons — directly above feature cards, no large gap */}
+          <div
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4"
+            style={{
+              width: "fit-content",
+              maxWidth: "100%",
+              marginBottom: "clamp(2rem, 5vh, 3.5rem)",
+              animation: "fadeInUp 1s ease-out 0.2s both",
+            }}
+          >
+            {/* Primary Button */}
+            <Link
+              to="/products"
+              className="group relative px-4 sm:px-6 py-3.5 sm:py-4 bg-white text-black rounded-full flex items-center justify-center gap-3 text-sm sm:text-base whitespace-nowrap overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:scale-105"
+            >
+              <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-black/10 to-transparent skew-x-12" />
+              <span className="relative">{t("hero.buttons.products")}</span>
+              <ArrowRight className="relative w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 transition-transform duration-300 group-hover:translate-x-1.5" />
+            </Link>
+
+            {/* Secondary Button */}
+            <Link to="/contact">
+              <button className="group relative px-4 sm:px-6 py-3.5 sm:py-4 bg-transparent border border-white/50 text-white rounded-full flex items-center justify-center gap-3 text-sm sm:text-base whitespace-nowrap overflow-hidden transition-all duration-300 hover:border-white hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]">
+                <span className="absolute inset-0 translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-out bg-white/10 rounded-full" />
+                <span className="relative">{t("hero.buttons.services")}</span>
+                <ArrowRightIcon className="relative w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 -rotate-45 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:rotate-[-55deg]" />
+              </button>
+            </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8">
-            {features.map((feature, index) => (
-              <FeatureCard
-                key={feature.type}
-                feature={feature}
-                index={index}
-                isHoverDevice={isHoverDevice}
-                isActive={activePopup === feature.type}
-                onMouseEnter={() =>
-                  isHoverDevice && setActivePopup(feature.type)
-                }
-                onMouseLeave={() => isHoverDevice && setActivePopup(null)}
-                onTap={() => handleToggle(feature.type)}
-                t={t}
-              />
-            ))}
+          {/* Feature cards label + grid */}
+          <div style={{ animation: "fadeInUp 1s ease-out 0.6s both" }}>
+            <div className="mb-5 md:mb-6">
+              <h2 className="text-white text-lg sm:text-xl md:text-2xl font-light mb-1.5 sm:mb-2">
+                {t("hero.sectionTitle")}
+              </h2>
+              <p className="text-white/80 text-xs sm:text-sm">
+                {t("hero.sectionSubtitle")}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8">
+              {features.map((feature, index) => (
+                <FeatureCard
+                  key={feature.type}
+                  feature={feature}
+                  index={index}
+                  isHoverDevice={isHoverDevice}
+                  isActive={activePopup === feature.type}
+                  onMouseEnter={() =>
+                    isHoverDevice && setActivePopup(feature.type)
+                  }
+                  onMouseLeave={() => isHoverDevice && setActivePopup(null)}
+                  onTap={() => handleToggle(feature.type)}
+                  t={t}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
       <style>{`
+        /* Fill the full viewport — svh handles mobile browser chrome correctly */
+        .hero-section {
+          min-height: 100svh;
+        }
+        @supports not (min-height: 100svh) {
+          .hero-section { min-height: 100vh; }
+        }
+
+        /*
+          Navbar spacer:
+          navbar ≈ 80px + 24px padding = 104px.
+          This is a hard floor — content can never rise above this.
+          It does NOT grow, so title/buttons don't drift upward on large screens.
+        */
+        .navbar-spacer {
+          height: 104px;
+        }
+
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(30px); }
           to   { opacity: 1; transform: translateY(0); }
@@ -234,7 +262,6 @@ export default function HeroSection() {
           from { opacity: 0; transform: translateX(-50%) translateY(-8px); }
           to   { opacity: 1; transform: translateX(-50%) translateY(0); }
         }
-        /* Mobile full-screen popup slide-up */
         @keyframes sheetUp {
           from { opacity: 0; transform: translateY(16px); }
           to   { opacity: 1; transform: translateY(0); }
@@ -268,7 +295,7 @@ function FeatureCard({
   t,
 }: FeatureCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
-  const popupWidth = 480; // desktop popup width (px)
+  const popupWidth = 480;
 
   const direction = usePopupDirection(cardRef, isActive);
   const centreLeft = useClampedLeft(cardRef, isActive, popupWidth);
@@ -287,14 +314,13 @@ function FeatureCard({
         {t(`hero.features.${feature.type}.title`)}
       </h3>
 
-      {/* Touch hint */}
       {!isHoverDevice && (
         <span className="mt-2 inline-flex items-center gap-1 text-white/50 text-xs">
           {isActive ? "Tap to close" : "Tap to learn more"}
         </span>
       )}
 
-      {/* ── Desktop hover popup ── */}
+      {/* Desktop hover popup */}
       {isActive && isHoverDevice && (
         <div
           className="absolute bg-white rounded-xl shadow-2xl overflow-hidden z-50 flex flex-col"
@@ -305,6 +331,7 @@ function FeatureCard({
             left: `${centreLeft}px`,
             transform: "translateX(-50%)",
             width: `${popupWidth}px`,
+            maxWidth: "90vw",
             height: "auto",
             maxHeight: "480px",
             animation:
@@ -317,14 +344,11 @@ function FeatureCard({
         </div>
       )}
 
-      {/* ── Mobile tap popup (inline card below the heading) ── */}
+      {/* Mobile tap popup */}
       {isActive && !isHoverDevice && (
         <div
           className="mt-4 bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col sm:flex-row"
-          style={{
-            animation: "sheetUp 0.25s ease-out",
-            maxHeight: "460px",
-          }}
+          style={{ animation: "sheetUp 0.25s ease-out", maxHeight: "460px" }}
         >
           <PopupContent feature={feature} t={t} mobile />
         </div>
@@ -346,7 +370,6 @@ function PopupContent({
 }) {
   return (
     <>
-      {/* Text */}
       <div
         className={`flex flex-col justify-center p-4 sm:p-5 flex-1 min-w-0 ${
           mobile ? "order-2" : ""
@@ -369,7 +392,6 @@ function PopupContent({
         </p>
       </div>
 
-      {/* Image */}
       <div
         className={`flex-shrink-0 ${mobile ? "hidden" : "w-full h-36"}`}
         style={{

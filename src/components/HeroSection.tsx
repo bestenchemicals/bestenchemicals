@@ -140,23 +140,23 @@ export default function HeroSection() {
 
       {/* Hero copy */}
       <div
-        className="relative z-10 flex-1 flex flex-col justify-center px-4 sm:px-6 max-w-7xl mx-auto w-full pt-20 sm:pt-24"
+        className="relative z-10 flex-1 flex flex-col justify-end px-4 sm:px-6 max-w-7xl mx-auto w-full pb-24 sm:pb-20 md:pb-10"
         style={{ animation: "fadeInUp 1s ease-out" }}
       >
-        <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white mb-8 md:mb-12 leading-tight">
+        <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-yellow-200 mb-8 md:mb-32 leading-tight">
           {t("hero.title")}
           <br />
           {t("hero.titleBreak")}
         </h1>
 
         <div
-          className="flex flex-col sm:flex-row gap-3 sm:gap-4"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8 md:mt-12"
           style={{ width: "fit-content", maxWidth: "100%" }}
         >
           {/* Primary Button */}
           <Link
             to="/products"
-            className="group relative px-6 sm:px-8 py-3.5 sm:py-4 bg-white text-black rounded-full flex items-center justify-center gap-3 text-sm sm:text-base whitespace-nowrap overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:scale-105"
+            className="group relative px-4 sm:px-6 py-3.5 sm:py-4 bg-white text-black rounded-full flex items-center justify-center gap-3 text-sm sm:text-base whitespace-nowrap overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:scale-105"
             style={{ animation: "fadeInUp 1s ease-out 0.2s both" }}
           >
             {/* Shimmer sweep on hover */}
@@ -171,7 +171,7 @@ export default function HeroSection() {
           {/* Secondary Button */}
           <Link to="/contact">
             <button
-              className="group relative px-6 sm:px-8 py-3.5 sm:py-4 bg-transparent border border-white/50 text-white rounded-full flex items-center justify-center gap-3 text-sm sm:text-base whitespace-nowrap overflow-hidden transition-all duration-300 hover:border-white hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]"
+              className="group relative px-4 sm:px-6 py-3.5 sm:py-4 bg-transparent border border-white/50 text-white rounded-full flex items-center justify-center gap-3 text-sm sm:text-base whitespace-nowrap overflow-hidden transition-all duration-300 hover:border-white hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]"
               style={{ animation: "fadeInUp 1s ease-out 0.4s both" }}
             >
               {/* Frosted fill that wipes in from left */}

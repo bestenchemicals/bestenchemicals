@@ -102,8 +102,7 @@
       "links": [
         { "text": "Home", "href": "/" },
         { "text": "The Company", "href": "/#company" },
-        { "text": "Products", "href": "/products" },
-        { "text": "Services", "href": "/#services" }
+        { "text": "Products", "href": "/products" }
       ]
     },
     "productsLinks": {
@@ -261,7 +260,7 @@
             ]
           },
           {
-            "title": "Preservatives — Personal Care Industry",
+            "title": "Preservatives — Personal, Home Care & Hygiene Industry",
             "items": [
               "Besten Pcare (CIT-MIT Based)",
               "Besten PEH 691 (Phenoxyethanol and Ethyl Hexylglycerin Blend)"

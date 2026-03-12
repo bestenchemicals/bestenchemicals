@@ -61,7 +61,7 @@ export default function ProductDetailPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [productId]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(

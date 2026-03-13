@@ -14,7 +14,8 @@
     }
   },
   "hero": {
-    "title": "A Better Chemistry for Tomorrow...... That Matters....",
+    "title": "A Better Chemistry for Tomorrow......",
+    "subtitle": "That Matters....",
     "titleBreak": "",
     "buttons": {
       "products": "Our Products",
@@ -263,7 +264,11 @@
             "title": "Preservatives — Personal, Home Care & Hygiene Industry",
             "items": [
               "Besten Pcare (CIT-MIT Based)",
-              "Besten PEH 691 (Phenoxyethanol and Ethyl Hexylglycerin Blend)"
+              "Besten PEH 691 (Phenoxyethanol and Ethyl Hexylglycerin Blend)",
+              "Besten DMDMH",
+              "Besten CTAC 30",
+              "Besten Guard SP (Sodium Benzoate + Potassium Sorbate)",
+              "Besten HD care (1,2 Hexanediol)"
             ]
           }
         ]

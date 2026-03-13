@@ -160,7 +160,7 @@ export default function HeroSection() {
           >
             {t("hero.title")}
             <br />
-            {t("hero.titleBreak")}
+            {t("hero.subtitle")}
           </h1>
         </div>
 

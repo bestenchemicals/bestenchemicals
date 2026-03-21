@@ -7,16 +7,10 @@ import Footer from "./components/Footer";
 import ProductsListPage from "./pages/ProductsListPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import ContactPage from "./pages/ContactPage";
-import ChemicalLoader from "./components/ChemicalLoader";
-import { useEffect, useState } from "react";
+// import ChemicalLoader from "./components/ChemicalLoader";
+import { useEffect } from "react";
 
 function HomePage() {
-  const [loading, setLoading] = useState(true);
-
-  const handleLoadComplete = () => {
-    setLoading(false);
-  };
-
   const location = useLocation();
 
   useEffect(() => {
@@ -33,12 +27,7 @@ function HomePage() {
 
   return (
     <>
-      {loading && <ChemicalLoader onLoadComplete={handleLoadComplete} />}
-      <div
-        className={`min-h-screen bg-white transition-opacity duration-500 ${
-          loading ? "opacity-0" : "opacity-100"
-        }`}
-      >
+      <div className={`min-h-screen bg-white transition-opacity duration-500`}>
         <Navigation />
         <HeroSection />
         <div id="company">
